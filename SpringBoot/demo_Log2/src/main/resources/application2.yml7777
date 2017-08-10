@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: demo_log2
+
+eureka:
+  instance:
+        leaseRenewalIntervalInSeconds: 5
+        metadataMap:
+          instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:5555}/eureka/
+
+server:
+      port: 0

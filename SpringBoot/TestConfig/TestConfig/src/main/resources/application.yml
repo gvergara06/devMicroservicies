@@ -1,0 +1,14 @@
+server:
+  port: 8888
+  
+
+
+global-message: Configuration server is alive!
+
+spring:
+     cloud:
+        config:
+           server:
+              git:
+                 uri: https://github.com/gvergara06/configuration
+                 basedir: target/config

@@ -1,0 +1,16 @@
+info:
+      description: aplicacion mock demo_log2
+
+server:
+      port: 7777
+
+spring:
+      application:
+        name: demo_Log2
+eureka:
+      instance:
+        metadataMap:
+          instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      client:
+        serviceUrl:
+            defaultZone: http://localhost:5555/eureka

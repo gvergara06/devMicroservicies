@@ -1,0 +1,10 @@
+
+
+
+mvn clean
+
+mvn compile package
+
+java -jar target/myproject-0.0.1-SNAPSHOT.jar
+
+-Dserver.port=8989

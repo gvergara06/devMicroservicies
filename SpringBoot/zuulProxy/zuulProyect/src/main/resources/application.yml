@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zuulProyect
+
+zuul:
+  routes:
+    rest:
+      path: /rest/**
+      serviceId: demo_log2
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:5555/eureka/
+      
